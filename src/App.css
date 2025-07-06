@@ -63,7 +63,7 @@ h1 {
 }
 
 .letter {
-  border-bottom: 3px solid #2980b9;
+  border-bottom: 3px solid #ffffff;
   display: inline-flex;
   font-size: 30px;
   align-items: center;
@@ -127,4 +127,29 @@ h1 {
 
 .notification-container.show {
   transform: translateY(-50px);
+}
+
+/* hint button */
+.hint-button {
+  background-color: #52535b;        /* Grey background */
+  color: white;                  /* White text */
+  border: none;                  /* No border */
+  padding: 10px 20px;            /* Padding for size */
+  border-radius: 12px;           /* Curved corners */
+  font-size: 1rem;               /* Font size */
+  cursor: pointer;               /* Pointer on hover */
+  opacity: 0;                    /* Start hidden */
+  animation: fadeIn 1s ease-in forwards; /* Smooth fade-in */
+  transition: background-color 0.3s ease;
+}
+
+.hint-button:hover {
+  background-color: #222117; /* Slightly lighter grey on hover */
+}
+
+/* Fade-in keyframes */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
 }

@@ -1,5 +1,6 @@
 import React, {useEffect} from 'react'
 import {checkWin} from '../helper/helpers';
+import confetti from 'canvas-confetti';
 
 const Popup = ({correctLetters,wrongLetters,selectedWord,setPlayable, playAgain}) => {
     let finalMessage = '';
@@ -8,6 +9,7 @@ const Popup = ({correctLetters,wrongLetters,selectedWord,setPlayable, playAgain}
 
     if ( checkWin(correctLetters, wrongLetters, selectedWord) === 'win'){
         finalMessage = 'Congradulations! You won! 😃'
+        confetti();
         playable = false;
     } else if(checkWin(correctLetters,wrongLetters,selectedWord) === 'lose'){
         finalMessage = 'Unfortunately you lost. 😕';

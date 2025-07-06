@@ -30,6 +30,8 @@ const words = [
   'class',
   'module'
 ];
+
+
 let selectedWord = words[Math.floor(Math.random() * words.length)];
 
 function App() {
@@ -77,7 +79,7 @@ function App() {
 
   return (
     <>
-      <Header showHint={showHint} setShowHint={setShowHint} />
+      <Header showHint={showHint} setShowHint={setShowHint} selectedWord={selectedWord} wrongLetters={wrongLetters}/>
       <div className = "game-container">
         <Figure wrongLetters={wrongLetters}/>
         <WrongLetters wrongLetters={wrongLetters}/>
